@@ -486,3 +486,6 @@ stock GetPVarStringEx(playerid, var_name[])
 	GetPVarString(playerid, var_name, name, sizeof name);
 	return name;
 }
+
+stock Teste(playerid)
+	return true;
