@@ -4,20 +4,22 @@
 
 	Filterscript base para o estilo de minigame Attack/Defense
 	
-	- AtenÁ„o -
-	Se estiver lendo isso, È porque eu, Roger, lhe passei o mode.
-	Se vocÍ n„o souber no que estiver modificando, por favor, contate-me
-	para maiores informaÁıes:
+	- Aten√ß√£o -
+	Se estiver lendo isso, √© porque eu, Roger, lhe passei o mode.
+	Se voc√™ n√£o souber no que estiver modificando, por favor, contate-me
+	para maiores informa√ß√µes:
 	    Facebook: 	Roger Gomes Costa
 		E-mail: 	roger.gomes@outlook.com
 
 
-	* Este script faz parte da divis„o "Games" da Roger Soluctions
-	e est· alocada na area San Andreas Multiplayer (SAMP)
+	* Este script faz parte da divis√£o "Games" da Roger Soluctions
+	e est√° alocada na area San Andreas Multiplayer (SAMP)
 		
 	Att,
 	    Roger Costa
 		CEO R.S.Company
+		
+		*testando
 		
 
 */
@@ -168,7 +170,7 @@ public EndMinigame()
     {
     	LoopPlayer(i)
 		{
-		    if(PlayerLang(i) == 0) format(str, sizeof str, "'%s' foi o melhor player e escolher· o prÛximo minigame.", GetPVarStringEx(GetSVarInt("PlayerInCP"), "PlayerName"));
+		    if(PlayerLang(i) == 0) format(str, sizeof str, "'%s' foi o melhor player e escolher√° o pr√≥ximo minigame.", GetPVarStringEx(GetSVarInt("PlayerInCP"), "PlayerName"));
 		    else if(PlayerLang(i) == 1) format(str, sizeof str, "'%s' was the best player and choose next minigame.", GetPVarStringEx(GetSVarInt("PlayerInCP"), "PlayerName"));
 			SendClientMessage(i, COLOR_WHITE, str);
         }
@@ -186,7 +188,7 @@ public EndMinigame()
 		{
 			LoopPlayer(i)
 			{
-			    if(PlayerLang(i) == 0) format(str, sizeof str, "'%s' foi o melhor player e escolher· o prÛximo minigame.", GetPVarStringEx(GetSVarInt("TopPlayerID"), "PlayerName"));
+			    if(PlayerLang(i) == 0) format(str, sizeof str, "'%s' foi o melhor player e escolher√° o pr√≥ximo minigame.", GetPVarStringEx(GetSVarInt("TopPlayerID"), "PlayerName"));
 			    else if(PlayerLang(i) == 1) format(str, sizeof str, "'%s' was the best player and choose next minigame.", GetPVarStringEx(GetSVarInt("TopPlayerID"), "PlayerName"));
 				SendClientMessage(i, COLOR_WHITE, str);
 		    }
@@ -242,7 +244,7 @@ public OnPlayerSpawn(playerid)
 	TextDrawHideForPlayer(playerid, DMG_TEXTDRAW_TEAM_NAME[2]);
 	TextDrawHideForPlayer(playerid, DMG_TEXTDRAW_TEAM_NAME[3]);
 
-	// Minigame j· se iniciou...
+	// Minigame j√° se iniciou...
 	if(GetSVarInt("GamemodeStatus") == DMG_STATUS_PLAYING_ROUND 		||
        GetSVarInt("GamemodeStatus") == DMG_STATUS_END_ROUND)
 	{
@@ -251,7 +253,7 @@ public OnPlayerSpawn(playerid)
 		//SetPlayerSpec(playerid);
 		SetPlayerColor(playerid, SPEC_COLOR);
 	}
-	// Esperando comeÁar o minigame...
+	// Esperando come√ßar o minigame...
 	else if(GetSVarInt("GamemodeStatus") == DMG_STATUS_WAITING_ROUND)
 	{
 	    SetPVarInt(playerid, "PlayerStatus", DMG_STATUS_WAITING_ROUND);
@@ -347,8 +349,8 @@ public OnPlayerRequestClass(playerid, classid)
 
 public OnPlayerEnterCheckpoint(playerid)
 {
-	// Checkpoint Timer, padr„o para todos os Minigames A/D
-	// Favor n„o alterar se n„o souber o que est· fazendo...
+	// Checkpoint Timer, padr√£o para todos os Minigames A/D
+	// Favor n√£o alterar se n√£o souber o que est√° fazendo...
     if(GetPVarInt(playerid, "PlayerTeam") == ATTACK)
     {
         if(GetSVarInt("AttackInCP") == 0)
@@ -359,7 +361,7 @@ public OnPlayerEnterCheckpoint(playerid)
 
 			LoopPlayer(i)
 			{
-			    if(PlayerLang(i) == 0) format(str, sizeof str, "%s est· capturando o checkpoint.", GetPVarStringEx(playerid, "PlayerName"));
+			    if(PlayerLang(i) == 0) format(str, sizeof str, "%s est√° capturando o checkpoint.", GetPVarStringEx(playerid, "PlayerName"));
 			    else if(PlayerLang(i) == 1) format(str, sizeof str, "%s is capturing checkpoint.", GetPVarStringEx(playerid, "PlayerName"));
 	            SendClientMessageToAll(COLOR_ORANGE, str);
 			}
@@ -372,8 +374,8 @@ public OnPlayerEnterCheckpoint(playerid)
 
 public OnPlayerLeaveCheckpoint(playerid)
 {
-	// Checkpoint Timer, padr„o para todos os Minigames A/D
-	// Favor n„o alterar se n„o souber o que est· fazendo...
+	// Checkpoint Timer, padr√£o para todos os Minigames A/D
+	// Favor n√£o alterar se n√£o souber o que est√° fazendo...
 	if(GetSVarInt("AttackInCP") == 1)
 	{
 		if(playerid == GetSVarInt("PlayerInCP"))
@@ -453,7 +455,7 @@ public OnPlayerDisconnect(playerid, reason)
 	Deathmatch Minigames
 	    por Roger Costa
 	    
-	Novas funÁıes criadas pro minigame
+	Novas fun√ß√µes criadas pro minigame
 */
 
 forward HideTeamObjectiveTextForPlayer(playerid, team);
