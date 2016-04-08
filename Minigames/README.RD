@@ -1,4 +1,4 @@
-## O servidor suporte por enquanto 5 tipos de minigames:
+##O servidor suporta por enquanto 5 tipos de minigames:
 
 1. A/D - Attack and Defense
 2. TDM - Team Deathmatch
